@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eno-nU-kGt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="erb-1y-ChW">
+            <objects>
+                <viewController id="eno-nU-kGt" customClass="LoginViewController" customModule="Matchbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C8M-qN-DJv"/>
+                        <viewControllerLayoutGuide type="bottom" id="lU0-m7-JNs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S2l-9u-gJo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yD9-te-nmQ">
+                                <rect key="frame" x="155.5" y="260" width="64" height="98"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQm-MC-HFW">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="34"/>
+                                        <color key="backgroundColor" red="0.98373538255691528" green="0.82715409994125366" blue="0.19920048117637634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpButtonTapped:" destination="eno-nU-kGt" eventType="touchUpInside" id="T9G-K1-CjH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJa-an-lbB">
+                                        <rect key="frame" x="0.0" y="64" width="64" height="34"/>
+                                        <color key="backgroundColor" red="0.98373097180000002" green="0.82716530560000001" blue="0.20014435050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logInButtonTapped:" destination="eno-nU-kGt" eventType="touchUpInside" id="Xe2-ON-zil"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NJa-an-lbB" firstAttribute="height" secondItem="ZQm-MC-HFW" secondAttribute="height" id="2Pz-OX-vbz"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-Book Stack-50" translatesAutoresizingMaskIntoConstraints="NO" id="7wg-by-4S2">
+                                <rect key="frame" x="162" y="50" width="50" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="QIg-tv-z53"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yD9-te-nmQ" firstAttribute="top" secondItem="7wg-by-4S2" secondAttribute="bottom" constant="95" id="2pn-Sh-T6C"/>
+                            <constraint firstItem="7wg-by-4S2" firstAttribute="centerX" secondItem="S2l-9u-gJo" secondAttribute="centerX" id="9RB-Wk-3tj"/>
+                            <constraint firstItem="yD9-te-nmQ" firstAttribute="centerX" secondItem="S2l-9u-gJo" secondAttribute="centerX" id="EX3-NU-L9I"/>
+                            <constraint firstItem="7wg-by-4S2" firstAttribute="top" secondItem="C8M-qN-DJv" secondAttribute="bottom" constant="30" id="Nej-Z1-LZf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logInButton" destination="NJa-an-lbB" id="Ox5-ik-bvm"/>
+                        <outlet property="signUpButton" destination="ZQm-MC-HFW" id="gPX-zu-r8N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="niv-14-4wI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="169.56521739130437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-Book Stack-50" width="50" height="50"/>
+    </resources>
+</document>
