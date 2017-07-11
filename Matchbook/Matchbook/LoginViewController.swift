@@ -36,6 +36,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signUpOrLogInButton.layer.cornerRadius = 6
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,17 +67,15 @@ extension LoginViewController: FUIAuthDelegate {
                 
                 User.setCurrent(user)
                 
-                let storyboard = UIStoryboard(name: "Main", bundle: .main)
                 // go to main storyboard
-                if let initialViewController = storyboard.instantiateInitialViewController() {
-                    self.view.window?.rootViewController = initialViewController
-                    self.view.window?.makeKeyAndVisible()
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
                 }
-            }
             // else a new user!
             else {
                 print("New user!")
-                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+                self.performSegue(withIdentifier: Constants.Segue.toCreatUsername, sender: self)
             }
         })
         
