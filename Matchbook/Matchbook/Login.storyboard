@@ -22,32 +22,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yD9-te-nmQ">
-                                <rect key="frame" x="155.5" y="260" width="64" height="98"/>
+                                <rect key="frame" x="118" y="260" width="139" height="34"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQm-MC-HFW">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="34"/>
-                                        <color key="backgroundColor" red="0.98373538255691528" green="0.82715409994125366" blue="0.19920048117637634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Sign Up">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="signUpButtonTapped:" destination="eno-nU-kGt" eventType="touchUpInside" id="T9G-K1-CjH"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJa-an-lbB">
-                                        <rect key="frame" x="0.0" y="64" width="64" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="34"/>
                                         <color key="backgroundColor" red="0.98373097180000002" green="0.82716530560000001" blue="0.20014435050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Log In">
+                                        <state key="normal" title="Sign Up or Log In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="logInButtonTapped:" destination="eno-nU-kGt" eventType="touchUpInside" id="Xe2-ON-zil"/>
+                                            <action selector="signUpOrLogInButtonTapped:" destination="eno-nU-kGt" eventType="touchUpInside" id="X4x-QB-hDH"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="NJa-an-lbB" firstAttribute="height" secondItem="ZQm-MC-HFW" secondAttribute="height" id="2Pz-OX-vbz"/>
-                                </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-Book Stack-50" translatesAutoresizingMaskIntoConstraints="NO" id="7wg-by-4S2">
                                 <rect key="frame" x="162" y="50" width="50" height="115"/>
@@ -65,8 +52,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logInButton" destination="NJa-an-lbB" id="Ox5-ik-bvm"/>
-                        <outlet property="signUpButton" destination="ZQm-MC-HFW" id="gPX-zu-r8N"/>
+                        <outlet property="signUpOrLogInButton" destination="NJa-an-lbB" id="5Xf-so-9Vm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niv-14-4wI" userLabel="First Responder" sceneMemberID="firstResponder"/>
