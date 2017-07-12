@@ -21,6 +21,7 @@
 		00B4BBBB1F1551E000ABB533 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4BBBA1F1551E000ABB533 /* UserService.swift */; };
 		00B4BBBE1F1570E800ABB533 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4BBBD1F1570E800ABB533 /* Constants.swift */; };
 		00B4BBC01F1571C600ABB533 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4BBBF1F1571C600ABB533 /* Storyboard+Utility.swift */; };
+		00D13C3E1F168EE500A632DF /* Best-Selling-Books.json in Resources */ = {isa = PBXBuildFile; fileRef = 00D13C3C1F168EE500A632DF /* Best-Selling-Books.json */; };
 		BCA55B79EE0EF336CC283118 /* Pods_Matchbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ED970F416BBA5FE8494B04 /* Pods_Matchbook.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		00B4BBBA1F1551E000ABB533 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		00B4BBBD1F1570E800ABB533 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00B4BBBF1F1571C600ABB533 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		00D13C3C1F168EE500A632DF /* Best-Selling-Books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Best-Selling-Books.json"; path = "Matchbook/Best-Selling-Books.json"; sourceTree = "<group>"; };
 		42D5DF80FFECBF86D0C7AB20 /* Pods-Matchbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Matchbook/Pods-Matchbook.release.xcconfig"; sourceTree = "<group>"; };
 		53ED970F416BBA5FE8494B04 /* Pods_Matchbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matchbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A024C2389D1BF343F9B8F852 /* Pods-Matchbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchbook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matchbook/Pods-Matchbook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		000C50D61F143D5A000BE2AE /* Matchbook */ = {
 			isa = PBXGroup;
 			children = (
+				00D13C3D1F168EE500A632DF /* JSON */,
 				000C50D71F143D5A000BE2AE /* AppDelegate.swift */,
 				000C50DE1F143D5A000BE2AE /* Assets.xcassets */,
 				00B4BBB21F153A3E00ABB533 /* View Controllers */,
@@ -144,6 +147,15 @@
 				00B4BBBF1F1571C600ABB533 /* Storyboard+Utility.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		00D13C3D1F168EE500A632DF /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				00D13C3C1F168EE500A632DF /* Best-Selling-Books.json */,
+			);
+			name = JSON;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		358B27E7C3E19D01628AB6DB /* Frameworks */ = {
@@ -229,6 +241,7 @@
 				000C50E21F143D5A000BE2AE /* LaunchScreen.storyboard in Resources */,
 				00B4BBAD1F144B4400ABB533 /* GoogleService-Info.plist in Resources */,
 				000C50DF1F143D5A000BE2AE /* Assets.xcassets in Resources */,
+				00D13C3E1F168EE500A632DF /* Best-Selling-Books.json in Resources */,
 				00B4BBAF1F1539CB00ABB533 /* Login.storyboard in Resources */,
 				000C50DD1F143D5A000BE2AE /* Main.storyboard in Resources */,
 			);

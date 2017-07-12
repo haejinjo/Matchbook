@@ -17,11 +17,11 @@ struct Book {
     let description: String
     let amazonURL: String
     
-//    init(json: JSON) {
-//        self.title = json[
-//        self.author =
-//        self.imageURL =
-//        self.description =
-//        self.amazonURL =
-//    }
+    init(json: JSON) {
+        self.title = json["title"].stringValue
+        self.author = json["author"].stringValue
+        self.imageURL = json["book_image"].stringValue
+        self.description = json["description"].stringValue
+        self.amazonURL = json["amazon_product_url"].stringValue
+    }
 }
