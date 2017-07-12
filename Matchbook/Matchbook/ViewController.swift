@@ -80,7 +80,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-    }
+        let randomListIndex: Int = Int(arc4random_uniform(14))
+        let randomBookIndex: Int = Int(arc4random_uniform(5))
+        
+        let apiToContact = "https://api.nytimes.com/svc/books/v3/lists/overview.json?list=hardcover-fiction&api-key=8b2a0ba899274e7191ac09415872c362"
+        
+        Alamofire.request(apiToContact).validate().responseJSON() { response in
+            switch response.result {
+            case .success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    let randomBookChunk = json["results"]["lists"][randomListIndex]["books"][randomBookIndex]
+                    let randomBook = Book(json: randomBookChunk)
+                    self.book = randomBook
+                    self.titleLabel.text = randomBook.title
+                    self.authorLabel.text = randomBook.author
+                    self.summaryTextView.text = randomBook.description
+                    self.coverImage.image = Image(self.loadCover(urlString: randomBook.imageURL))
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    } // end of next button tapped
+    
     @IBAction func profileButtonTapped(_ sender: UIButton) {
     }
 
