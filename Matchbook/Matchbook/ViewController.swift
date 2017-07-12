@@ -15,8 +15,6 @@ import AlamofireNetworkActivityIndicator
 class ViewController: UIViewController {
     
     var book: Book?
-
-   // var amazonLink: String
     
     // VC LIFECYCLE
     override func viewDidLoad() {
@@ -43,7 +41,7 @@ class ViewController: UIViewController {
                     self.titleLabel.text = randomBook.title
                     self.authorLabel.text = randomBook.author
                     self.summaryTextView.text = randomBook.description
-                   // self.amazonLink = randomBook.amazonURL
+                    self.coverImage.image = Image(self.loadCover(urlString: randomBook.imageURL))
                 }
             case .failure(let error):
                 print(error)
@@ -54,6 +52,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadCover(urlString:String) {
+        coverImage.af_setImage(withURL: URL(string: urlString)!)
     }
     
 // IB OUTLETS
@@ -69,7 +71,9 @@ class ViewController: UIViewController {
 
 // IB ACTIONS
     @IBAction func buyButtonTapped(_ sender: UIButton) {
-        //UIApplication.shared.openURL(URL(string: amazonLink)!)
+        if let book = book {
+            UIApplication.shared.openURL(URL(string: book.amazonURL)!)
+        }
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
