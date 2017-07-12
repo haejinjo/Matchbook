@@ -79,7 +79,6 @@ extension LoginViewController: FUIAuthDelegate {
             }
         })
         
-        
         print("handle user signup/login")
     }
     

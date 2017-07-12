@@ -22,7 +22,6 @@ class CreateUsernameViewController: UIViewController {
     
     // SUBVIEWS
     @IBOutlet weak var usernameTextField: UITextField!
-    
     @IBOutlet weak var nextButton: UIButton!
     
     // IBActions
