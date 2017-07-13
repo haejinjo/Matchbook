@@ -81,23 +81,30 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KSm-nn-W53">
-                                <rect key="frame" x="46" y="125" width="298" height="215"/>
+                                <rect key="frame" x="46" y="135" width="298" height="210"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NA4-Fi-koP">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="210"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="210"/>
                                         <color key="backgroundColor" red="0.98342269660000003" green="0.82788819069999997" blue="0.2875460386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="210" id="BQL-ww-aBg"/>
+                                            <constraint firstAttribute="width" constant="150" id="d6q-i9-ZcE"/>
+                                        </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="I47-8I-2tb">
-                                        <rect key="frame" x="190" y="0.0" width="108" height="95"/>
+                                        <rect key="frame" x="180" y="0.0" width="118" height="150"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umf-sy-fJU">
-                                                <rect key="frame" x="0.0" y="0.0" width="108" height="32.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umf-sy-fJU">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="7CY-Ze-TBJ"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf7-Ho-MYA">
-                                                <rect key="frame" x="0.0" y="62.5" width="108" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="90" width="118" height="60"/>
                                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -110,15 +117,13 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="I47-8I-2tb" secondAttribute="bottom" constant="120" id="oYh-4c-9K8"/>
+                                    <constraint firstItem="NA4-Fi-koP" firstAttribute="top" secondItem="KSm-nn-W53" secondAttribute="top" id="Tf7-Y9-c3o"/>
+                                    <constraint firstItem="NA4-Fi-koP" firstAttribute="leading" secondItem="KSm-nn-W53" secondAttribute="leading" id="bEo-RC-wio"/>
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ICQ-V6-wWM">
-                                <rect key="frame" x="46" y="350" width="283" height="166"/>
+                                <rect key="frame" x="46" y="375" width="283" height="141"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="166" id="DnC-UH-y4z"/>
-                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</string>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -126,18 +131,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KSm-nn-W53" firstAttribute="top" secondItem="5j3-Mh-7Gd" secondAttribute="bottom" constant="20" id="07g-F9-kzQ"/>
+                            <constraint firstItem="KSm-nn-W53" firstAttribute="top" secondItem="5j3-Mh-7Gd" secondAttribute="bottom" constant="30" id="07g-F9-kzQ"/>
                             <constraint firstItem="5j3-Mh-7Gd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0xJ-IA-fQE"/>
-                            <constraint firstItem="ICQ-V6-wWM" firstAttribute="top" secondItem="KSm-nn-W53" secondAttribute="bottom" constant="10" id="2eX-n7-tzP"/>
+                            <constraint firstItem="ICQ-V6-wWM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="355" id="2Hz-0E-arD"/>
+                            <constraint firstItem="ICQ-V6-wWM" firstAttribute="top" secondItem="KSm-nn-W53" secondAttribute="bottom" constant="30" id="2eX-n7-tzP"/>
                             <constraint firstItem="5j3-Mh-7Gd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="3e4-Kc-r48"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KSm-nn-W53" secondAttribute="trailing" constant="15" id="8DR-1G-gJ3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ICQ-V6-wWM" secondAttribute="trailing" constant="30" id="8WG-Zv-qwu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jCv-Fr-Sza" secondAttribute="trailing" constant="30" id="I8J-a7-pV2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ICQ-V6-wWM" secondAttribute="bottom" constant="151" id="Tch-wL-EnK"/>
                             <constraint firstItem="KSm-nn-W53" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="fex-LD-le5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jCv-Fr-Sza" secondAttribute="bottom" constant="60" id="kap-kA-cXL"/>
                             <constraint firstItem="ICQ-V6-wWM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="lU9-5H-Ri0"/>
                             <constraint firstItem="jCv-Fr-Sza" firstAttribute="top" secondItem="ICQ-V6-wWM" secondAttribute="bottom" constant="30" id="qaY-y6-iJx"/>
                             <constraint firstItem="jCv-Fr-Sza" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="wNG-dx-iqp"/>
+                            <constraint firstItem="KSm-nn-W53" firstAttribute="top" secondItem="5j3-Mh-7Gd" secondAttribute="bottom" constant="30" id="zwc-OD-vya"/>
                         </constraints>
                     </view>
                     <connections>
