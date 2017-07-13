@@ -16,6 +16,7 @@ extension UIStoryboard {
     enum MBType: String {
         case main // a case for each of the storyboards
         case login
+        case profile
         
         
         var filename: String {

@@ -11,6 +11,8 @@ import SwiftyJSON
 import Alamofire
 import AlamofireImage
 import AlamofireNetworkActivityIndicator
+import Kingfisher
+
 
 class ViewController: UIViewController {
     
@@ -20,14 +22,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profileButton.layer.cornerRadius = 30
+        profileButton.layer.cornerRadius = 35
         buyButton.layer.cornerRadius = 30
         saveButton.layer.cornerRadius = 30
         nextButton.layer.cornerRadius = 30
         
-        let randomListIndex: Int = Int(arc4random_uniform(14))
+        let randomListIndex: Int = Int(arc4random_uniform(11))
         let randomBookIndex: Int = Int(arc4random_uniform(5))
-        
+        DataRequest.addAcceptableImageContentTypes(["image/jpg"])
         let apiToContact = "https://api.nytimes.com/svc/books/v3/lists/overview.json?list=hardcover-fiction&api-key=8b2a0ba899274e7191ac09415872c362"
         
         Alamofire.request(apiToContact).validate().responseJSON() { response in
@@ -38,10 +40,11 @@ class ViewController: UIViewController {
                     let randomBookChunk = json["results"]["lists"][randomListIndex]["books"][randomBookIndex]
                     let randomBook = Book(json: randomBookChunk)
                     self.book = randomBook
+                    
                     self.titleLabel.text = randomBook.title
                     self.authorLabel.text = randomBook.author
                     self.summaryTextView.text = randomBook.description
-                    self.coverImage.image = Image(self.loadCover(urlString: randomBook.imageURL))
+                    self.coverImage.image = Image(self.loadCover(urlString: randomBook.imageURL, forced: false))
                 }
             case .failure(let error):
                 print(error)
@@ -54,8 +57,38 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadCover(urlString:String) {
-        coverImage.af_setImage(withURL: URL(string: urlString)!)
+    func loadCover(urlString:String, forced:Bool) {
+        if let url = URL(string: urlString) {
+            print(urlString)
+            
+            if !forced {
+                coverImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil, completionHandler: { (image, error, cache, url) in
+                    if ((error) != nil) {
+                        print(error?.localizedDescription)
+                    }
+                    if cache == .memory {
+                        print(cache)
+                        
+                        self.loadCover(urlString: urlString, forced: true)
+                        
+                    }
+                    self.coverImage.setNeedsLayout()
+                })
+
+            } else {
+                coverImage.kf.setImage(with: url, placeholder: nil, options: [.forceRefresh], progressBlock: nil, completionHandler: { (image, error, cache, url) in
+                    if ((error) != nil) {
+                        print(error?.localizedDescription)
+                    }
+                    self.coverImage.setNeedsLayout()
+                })
+            }
+            
+            
+        } else {
+            print("loadCover Failed, url String nil")
+        }
+        
     }
     
 // IB OUTLETS
@@ -77,14 +110,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        let randomListIndex: Int = Int(arc4random_uniform(14))
+        let randomListIndex: Int = Int(arc4random_uniform(11))
         let randomBookIndex: Int = Int(arc4random_uniform(5))
         
         let apiToContact = "https://api.nytimes.com/svc/books/v3/lists/overview.json?list=hardcover-fiction&api-key=8b2a0ba899274e7191ac09415872c362"
-        
+        DataRequest.addAcceptableImageContentTypes(["image/jpg"])
         Alamofire.request(apiToContact).validate().responseJSON() { response in
             switch response.result {
             case .success:
@@ -96,7 +130,7 @@ class ViewController: UIViewController {
                     self.titleLabel.text = randomBook.title
                     self.authorLabel.text = randomBook.author
                     self.summaryTextView.text = randomBook.description
-                    self.coverImage.image = Image(self.loadCover(urlString: randomBook.imageURL))
+                    self.coverImage.image = Image(self.loadCover(urlString: randomBook.imageURL, forced: false))
                 }
             case .failure(let error):
                 print(error)
@@ -105,6 +139,11 @@ class ViewController: UIViewController {
     } // end of next button tapped
     
     @IBAction func profileButtonTapped(_ sender: UIButton) {
+        
+        let initialViewController = UIStoryboard.initialViewController(for: .profile)
+        self.view.window?.rootViewController = initialViewController
+        self.view.window?.makeKeyAndVisible()
+        
     }
 
 }

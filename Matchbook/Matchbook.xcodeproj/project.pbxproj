@@ -23,6 +23,8 @@
 		00D13C3E1F168EE500A632DF /* Best-Selling-Books.json in Resources */ = {isa = PBXBuildFile; fileRef = 00D13C3C1F168EE500A632DF /* Best-Selling-Books.json */; };
 		00D13C401F16AF5600A632DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00D13C3F1F16AF5600A632DF /* GoogleService-Info.plist */; };
 		BCA55B79EE0EF336CC283118 /* Pods_Matchbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ED970F416BBA5FE8494B04 /* Pods_Matchbook.framework */; };
+		CF48B23E1F16CBB800A43DA3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48B23D1F16CBB800A43DA3 /* ProfileViewController.swift */; };
+		CF48B2401F16CC3E00A43DA3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF48B23F1F16CC3E00A43DA3 /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		42D5DF80FFECBF86D0C7AB20 /* Pods-Matchbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Matchbook/Pods-Matchbook.release.xcconfig"; sourceTree = "<group>"; };
 		53ED970F416BBA5FE8494B04 /* Pods_Matchbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matchbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A024C2389D1BF343F9B8F852 /* Pods-Matchbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchbook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matchbook/Pods-Matchbook.debug.xcconfig"; sourceTree = "<group>"; };
+		CF48B23D1F16CBB800A43DA3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CF48B23F1F16CC3E00A43DA3 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				00B4BBAE1F1539CB00ABB533 /* Login.storyboard */,
 				000C50DB1F143D5A000BE2AE /* Main.storyboard */,
 				000C50E01F143D5A000BE2AE /* LaunchScreen.storyboard */,
+				CF48B23F1F16CC3E00A43DA3 /* Profile.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 				000C50D91F143D5A000BE2AE /* ViewController.swift */,
 				00B4BBB31F153B4B00ABB533 /* LoginViewController.swift */,
 				00B4BBB81F154AAD00ABB533 /* CreateUsernameViewController.swift */,
+				CF48B23D1F16CBB800A43DA3 /* ProfileViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 				00D13C3E1F168EE500A632DF /* Best-Selling-Books.json in Resources */,
 				00B4BBAF1F1539CB00ABB533 /* Login.storyboard in Resources */,
 				000C50DD1F143D5A000BE2AE /* Main.storyboard in Resources */,
+				CF48B2401F16CC3E00A43DA3 /* Profile.storyboard in Resources */,
 				00D13C401F16AF5600A632DF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +311,7 @@
 			files = (
 				00B4BBB61F15495500ABB533 /* User.swift in Sources */,
 				00B4BBB41F153B4B00ABB533 /* LoginViewController.swift in Sources */,
+				CF48B23E1F16CBB800A43DA3 /* ProfileViewController.swift in Sources */,
 				00B4BBBB1F1551E000ABB533 /* UserService.swift in Sources */,
 				00B4BBC01F1571C600ABB533 /* Storyboard+Utility.swift in Sources */,
 				000C50DA1F143D5A000BE2AE /* ViewController.swift in Sources */,
