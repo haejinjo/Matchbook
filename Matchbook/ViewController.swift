@@ -27,9 +27,12 @@ class ViewController: UIViewController {
         saveButton.layer.cornerRadius = 30
         nextButton.layer.cornerRadius = 30
         
-        let randomListIndex: Int = Int(arc4random_uniform(11))
+        let randomListIndex: Int = Int(arc4random_uniform(8))+2
+            
         let randomBookIndex: Int = Int(arc4random_uniform(5))
+        
         DataRequest.addAcceptableImageContentTypes(["image/jpg"])
+        
         let apiToContact = "https://api.nytimes.com/svc/books/v3/lists/overview.json?list=hardcover-fiction&api-key=8b2a0ba899274e7191ac09415872c362"
         
         Alamofire.request(apiToContact).validate().responseJSON() { response in

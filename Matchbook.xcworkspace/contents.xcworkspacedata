@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "container:"
-      name = "JSON">
-      <FileRef
-         location = "group:Matchbook/Best-Selling-Books.json">
-      </FileRef>
-   </Group>
    <FileRef
       location = "group:Matchbook.xcodeproj">
    </FileRef>

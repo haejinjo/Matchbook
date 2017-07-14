@@ -7,9 +7,10 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
 import UIKit
 import FirebaseAuthUI
+import FirebaseDatabase
 
 class ProfileViewController: UIViewController {
     
@@ -23,7 +24,9 @@ class ProfileViewController: UIViewController {
         
         backButton.layer.cornerRadius = 5
         
-//        usernameLabel.text = user.username
+        let currentUser = User.current
+        
+        usernameLabel.text = "@\(currentUser.username)"
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,6 +38,8 @@ class ProfileViewController: UIViewController {
         self.view.window?.rootViewController = initialViewController
         self.view.window?.makeKeyAndVisible()
     }
+    
+    
 
     
 }

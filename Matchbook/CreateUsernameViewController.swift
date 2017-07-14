@@ -40,8 +40,8 @@ class CreateUsernameViewController: UIViewController {
             print("created new user: \(user.username)")
         }
         
-        let initialViewController = UIStoryboard.initialViewController(for: .main)
-        self.view.window?.rootViewController = initialViewController
-        self.view.window?.makeKeyAndVisible()
+        self.performSegue(withIdentifier: Constants.Segue.toCreateProfilePicture, sender: self)
+
+        
     }
 }

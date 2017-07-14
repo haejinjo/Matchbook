@@ -25,6 +25,8 @@
 		BCA55B79EE0EF336CC283118 /* Pods_Matchbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ED970F416BBA5FE8494B04 /* Pods_Matchbook.framework */; };
 		CF48B23E1F16CBB800A43DA3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48B23D1F16CBB800A43DA3 /* ProfileViewController.swift */; };
 		CF48B2401F16CC3E00A43DA3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF48B23F1F16CC3E00A43DA3 /* Profile.storyboard */; };
+		CF7970691F1826F500207E3E /* MBPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7970681F1826F500207E3E /* MBPhotoHelper.swift */; };
+		CF79706B1F182AD900207E3E /* CreateProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79706A1F182AD900207E3E /* CreateProfilePictureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		A024C2389D1BF343F9B8F852 /* Pods-Matchbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchbook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matchbook/Pods-Matchbook.debug.xcconfig"; sourceTree = "<group>"; };
 		CF48B23D1F16CBB800A43DA3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CF48B23F1F16CC3E00A43DA3 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		CF7970681F1826F500207E3E /* MBPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBPhotoHelper.swift; sourceTree = "<group>"; };
+		CF79706A1F182AD900207E3E /* CreateProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfilePictureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 				00D13C3D1F168EE500A632DF /* JSON */,
 				000C50D71F143D5A000BE2AE /* AppDelegate.swift */,
 				000C50DE1F143D5A000BE2AE /* Assets.xcassets */,
+				CF7970671F1826BC00207E3E /* Helpers */,
 				00B4BBB21F153A3E00ABB533 /* View Controllers */,
 				00B4BBB71F15495C00ABB533 /* Models */,
 				00B4BBB01F1539FF00ABB533 /* Storyboards */,
@@ -125,6 +130,7 @@
 				000C50D91F143D5A000BE2AE /* ViewController.swift */,
 				00B4BBB31F153B4B00ABB533 /* LoginViewController.swift */,
 				00B4BBB81F154AAD00ABB533 /* CreateUsernameViewController.swift */,
+				CF79706A1F182AD900207E3E /* CreateProfilePictureViewController.swift */,
 				CF48B23D1F16CBB800A43DA3 /* ProfileViewController.swift */,
 			);
 			name = "View Controllers";
@@ -170,6 +176,14 @@
 				53ED970F416BBA5FE8494B04 /* Pods_Matchbook.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF7970671F1826BC00207E3E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CF7970681F1826F500207E3E /* MBPhotoHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		D53F6C97DB56B3E10E2E7C38 /* Pods */ = {
@@ -309,12 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7970691F1826F500207E3E /* MBPhotoHelper.swift in Sources */,
 				00B4BBB61F15495500ABB533 /* User.swift in Sources */,
 				00B4BBB41F153B4B00ABB533 /* LoginViewController.swift in Sources */,
 				CF48B23E1F16CBB800A43DA3 /* ProfileViewController.swift in Sources */,
 				00B4BBBB1F1551E000ABB533 /* UserService.swift in Sources */,
 				00B4BBC01F1571C600ABB533 /* Storyboard+Utility.swift in Sources */,
 				000C50DA1F143D5A000BE2AE /* ViewController.swift in Sources */,
+				CF79706B1F182AD900207E3E /* CreateProfilePictureViewController.swift in Sources */,
 				008378071F159CC500AA0495 /* Book.swift in Sources */,
 				00B4BBBE1F1570E800ABB533 /* Constants.swift in Sources */,
 				00B4BBB91F154AAD00ABB533 /* CreateUsernameViewController.swift in Sources */,

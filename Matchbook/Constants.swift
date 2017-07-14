@@ -11,7 +11,7 @@ import Foundation
 struct Constants {
     
     struct Segue {
-        static let toCreatUsername = "toCreateUsername"
-        
+        static let toCreateUsername = "toCreateUsername"
+        static let toCreateProfilePicture = "toCreateProfilePicture"
     }
 }
