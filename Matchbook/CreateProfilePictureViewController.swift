@@ -31,6 +31,7 @@ class CreateProfilePictureViewController: UIViewController {
         nextButton.layer.cornerRadius = 6
     }
     
+    // IB ACTION FUNCTIONS
     
     @IBAction func takePhotoButtonTapped(_ sender: UIButton) {
         photoHelper.presentActionSheet(from: self)

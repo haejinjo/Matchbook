@@ -31,6 +31,7 @@ class CreateUsernameViewController: UIViewController {
         
         guard let firUser = Auth.auth().currentUser,
             let username = usernameTextField.text,
+            
             !username.isEmpty else { return }
         
         
