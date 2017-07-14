@@ -12,12 +12,14 @@ import Alamofire
 import AlamofireImage
 import AlamofireNetworkActivityIndicator
 import Kingfisher
-
+import FirebaseDatabase
+import FirebaseStorage
 
 class ViewController: UIViewController {
     
     var book: Book?
     
+
     // VC LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,8 +115,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-        
+        let imageRef = StorageService.newSavedBookImageReference()
+        StorageService.uploadImage(coverImage.image!, at: imageRef) { (downloadURL) in
+            guard let downloadURL = downloadURL else {
+                return
+            }
+            
+            let urlString = downloadURL.absoluteString
+            
+            print("save button tapped")
+       
     }
+}
+        
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         let randomListIndex: Int = Int(arc4random_uniform(11))
@@ -141,6 +154,9 @@ class ViewController: UIViewController {
         }
     } // end of next button tapped
     
+
+    
+    
     @IBAction func profileButtonTapped(_ sender: UIButton) {
         
         let initialViewController = UIStoryboard.initialViewController(for: .profile)
@@ -150,4 +166,5 @@ class ViewController: UIViewController {
     }
 
 }
+
 
